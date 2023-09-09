@@ -70,7 +70,7 @@ body {
     margin: 0 0 0 0;
     margin-bottom: 5%;
     color: #000;
-    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+   
     font-family: Alegreya;
     font-size: 50px;
     font-style: normal;
@@ -1088,7 +1088,7 @@ size: auto;   /* auto is the initial value */
 margin: 0;  /* this affects the margin in the printer settings */
 }
 #EstimatedPriceCell{
-background-color: #4A6073 ;
+font-weight: bolder ;
 }
 #scope li{
 text-transform: lowercase;
@@ -1104,5 +1104,5 @@ text-transform: uppercase;
 }
 
 #CarpetAreaCell{
-  background-color: #4A6073;
+  font-weight: bolder;
 }
