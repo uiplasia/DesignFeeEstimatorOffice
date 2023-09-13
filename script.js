@@ -56,6 +56,9 @@ function calculateEstimate() {
   const styling = document.querySelector('.button-option-styling.button-selected').getAttribute('data-value');
   const plan = document.querySelector('.button-option-plan.button-selected').getAttribute('data-value');
   const carpetArea = parseFloat(document.getElementById('carpet-area').value);
+  const clientName = document.getElementById('ClientName').value;
+  const projectID = document.getElementById('ProjectID').value;
+  console.log('Name:',projectID);
 
   // Define base prices based on carpet area range only if property type is "Office"
   let basePrices = basePricesOriginal; // Use the global basePrices object by default
@@ -146,7 +149,8 @@ function gatherUserSelections() {
   //const ceilingHeight = document.querySelector(".button-option-ceiling.button-selected").dataset.value;
   const plan = document.querySelector(".button-option-plan.button-selected").dataset.value;
   const carpetArea = parseFloat(document.getElementById("carpet-area").value);
-
+  const clientName = document.getElementById('ClientName').value;
+  const projectID = document.getElementById('ProjectID').value;
   // const selectedAddOns = [];
   // const addOnCheckboxes = document.querySelectorAll('input[name="add-on"]:checked');
   // addOnCheckboxes.forEach((checkbox) => {
@@ -158,7 +162,8 @@ function gatherUserSelections() {
       city,
       propertyType,
       styling,
-      
+      clientName,
+      projectID,
       plan,
       carpetArea,
       
@@ -178,8 +183,10 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
 document.getElementById("Confirm-btn").addEventListener("click", function () {
   const selections = gatherUserSelections();
   const estimatedPrice = calculateEstimate(selections);
-  const resultUrl = `result.html?projectType=${encodeURIComponent(selections.projectType)}&city=${encodeURIComponent(selections.city)}&propertyType=${encodeURIComponent(selections.propertyType)}&styling=${encodeURIComponent(selections.styling)}&plan=${encodeURIComponent(selections.plan)}&carpetArea=${encodeURIComponent(selections.carpetArea)}&estimatedPrice=${encodeURIComponent(estimatedPrice)}`;
-
+  const resultUrl = `result.html?projectType=${encodeURIComponent(selections.projectType)}&city=${encodeURIComponent(selections.city)}&propertyType=${encodeURIComponent(selections.propertyType)}&styling=${encodeURIComponent(selections.styling)}&plan=${encodeURIComponent(selections.plan)}&carpetArea=${encodeURIComponent(selections.carpetArea)}&estimatedPrice=${encodeURIComponent(estimatedPrice)}&clientName=${encodeURIComponent(selections.clientName)}&projectID=${encodeURIComponent(selections.projectID)}`;
+  document.getElementById('calculationResult').value = estimatedPrice;
+  
+  
  
   // Redirect to the result.html page
   window.open(resultUrl, "_blank");
@@ -294,3 +301,60 @@ document.getElementById("Confirm-btn").addEventListener("click", function () {
   // Redirect to the result.html page
   window.open(resultUrl, "_blank");
 });
+
+// Hidden input fields for selected values
+const selectedProjectTypeInput = document.getElementById('selected-project-type');
+const selectedPropertyTypeInput = document.getElementById('selected-property-type');
+const selectedStylingInput = document.getElementById('selected-styling');
+
+const selectedPlanTypeInput = document.getElementById('selected-plan-type');
+
+// Add click event listeners for project type buttons
+projectTypeButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    const selectedProjectType = this.getAttribute('data-value');
+    selectedProjectTypeInput.value = selectedProjectType;
+  });
+});
+
+// Add click event listeners for property type buttons
+propertyTypeButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    const selectedPropertyType = this.getAttribute('data-value');
+    selectedPropertyTypeInput.value = selectedPropertyType;
+  });
+});
+
+// Add click event listeners for styling buttons
+stylingButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    const selectedStyling = this.getAttribute('data-value');
+    selectedStylingInput.value = selectedStyling;
+  });
+});
+
+const selectedCityInput = document.getElementById('selected-city');
+
+// Add a click event listener to each city button
+cityButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    // Get the data-value attribute from the clicked button
+    const selectedCity = this.getAttribute('data-value');
+    
+    // Set the value of the hidden input field to the selected city
+    selectedCityInput.value = selectedCity;
+    
+    // Optionally, you can display a message to indicate the selected city
+    
+  });
+});
+
+
+// Add click event listeners for plan type buttons
+planButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    const selectedPlanType = this.getAttribute('data-value');
+    selectedPlanTypeInput.value = selectedPlanType;
+  });
+});
+

@@ -79,15 +79,64 @@ body {
     text-align: center;
     margin-bottom: 10px;
 }
+
   
-  label {
-      font-weight: bold;
-      display: block;
-      margin-bottom: 5px;
+  
+.button-option-plan {
+  width: 195px;
+  height: 340px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  border: 5px solid #BDA081;
+  background: #DDE9EC;
+  box-shadow: 20px 20px 20px 10px rgba(0, 0, 0, 0.25);
+  color: #0C0D0D;
+  font-family: Alegreya;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  margin: auto;
+  line-height: normal;
+}
+.input-label-ClientName{
+  flex: 0 0 auto; /* Avoid label from expanding */
+  padding: 5px 10px; /* Add padding to the label box */
+  width: 198px;
+  height: 198px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  font-family: Alegreya;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  padding-left: 20px;
+  margin: 0 18% 0 20%;
+  box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.25);
+  border: 10px solid #141A20;
+  background: #3E4B57;
+  color: #DDE}
+  .input-label-ProjectID{
+    flex: 0 0 auto; /* Avoid label from expanding */
+  padding: 5px 10px; /* Add padding to the label box */
+  width: 198px;
+  height: 198px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  font-family: Alegreya;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  padding-left: 20px;
+  margin: 0 18% 0 20%;
+  box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.25);
+  border: 10px solid #141A20;
+  background: #3E4B57;
+  color: #DDe
   }
-  
-  
-  
   button {width: 249px;
     height: 74px;
     flex-shrink: 0;
@@ -938,7 +987,46 @@ body {
       margin: auto;
       line-height: normal;
     }
-      
+    .input-label-ClientName{
+      flex: 0 0 auto; /* Avoid label from expanding */
+      padding: 5px 10px; /* Add padding to the label box */
+      width: 198px;
+      height: 198px;
+      flex-shrink: 0;
+      border-radius: 20px;
+      font-family: Alegreya;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-align: center;
+      padding-left: 20px;
+      margin: 0 18% 0 20%;
+      box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.25);
+      border: 10px solid #141A20;
+      background: #3E4B57;
+      color: #DDE9EC;
+    }
+    .input-label-ProjectID{
+      flex: 0 0 auto; /* Avoid label from expanding */
+      padding: 5px 10px; /* Add padding to the label box */
+      width: 198px;
+      height: 198px;
+      flex-shrink: 0;
+      border-radius: 20px;
+      font-family: Alegreya;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-align: center;
+      padding-left: 20px;
+      margin: 0 18% 0 20%;
+      box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.25);
+      border: 10px solid #141A20;
+      background: #3E4B57;
+      color: #DDE9EC;
+    }
       /* Rest of your existing styles */
       .input-label-carpetarea {
         flex: 0 0 auto; /* Avoid label from expanding */
@@ -1077,11 +1165,12 @@ th {
 }
 
 .Disclaimer{
-font-size: 10px;
+font-size: 6px;
+margin-top: 10px;
 }
 
 #description{
-font-size: 13px;
+font-size: 10px;
 }
 @page {
 size: auto;   /* auto is the initial value */
