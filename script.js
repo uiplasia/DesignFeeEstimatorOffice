@@ -185,8 +185,8 @@ document.getElementById("Confirm-btn").addEventListener("click", function () {
   const estimatedPrice = calculateEstimate(selections);
   const resultUrl = `result.html?projectType=${encodeURIComponent(selections.projectType)}&city=${encodeURIComponent(selections.city)}&propertyType=${encodeURIComponent(selections.propertyType)}&styling=${encodeURIComponent(selections.styling)}&plan=${encodeURIComponent(selections.plan)}&carpetArea=${encodeURIComponent(selections.carpetArea)}&estimatedPrice=${encodeURIComponent(estimatedPrice)}&clientName=${encodeURIComponent(selections.clientName)}&projectID=${encodeURIComponent(selections.projectID)}`;
   document.getElementById('calculationResult').value = estimatedPrice;
-  
-  
+ 
+
  
   // Redirect to the result.html page
   window.open(resultUrl, "_blank");
@@ -287,6 +287,17 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
   console.log("Selections:", selections);
   console.log("Estimated Price:", estimatedPrice);
   window.scrollTo({ top: 0, behavior: "smooth" });
+  selectedSigningAmount = 0.4 * estimatedPrice;
+  selectedPhaseOneComplete = 0.4 * estimatedPrice;
+  selectedTwoDaysBeforeComplete = 0.2 * estimatedPrice;
+  console.log("signing amount:",selectedSigningAmount);
+  console.log("signing amount:",selectedPhaseOneComplete);
+  console.log("signing amount:",selectedTwoDaysBeforeComplete);
+  document.getElementById('signingAmount').value = selectedSigningAmount;
+  document.getElementById('phaseOneComplete').value = selectedPhaseOneComplete;
+  document.getElementById('twoDaysBeforeComplete').value = selectedTwoDaysBeforeComplete;
+
+
 });
 
 document.getElementById("Confirm-btn").addEventListener("click", function () {
@@ -297,6 +308,17 @@ document.getElementById("Confirm-btn").addEventListener("click", function () {
   console.log("Estimated Price:", estimatedPrice);
   const resultUrl = `result.html?projectType=${encodeURIComponent(selections.projectType)}&city=${encodeURIComponent(selections.city)}&propertyType=${encodeURIComponent(selections.propertyType)}&styling=${encodeURIComponent(selections.styling)}&plan=${encodeURIComponent(selections.plan)}&carpetArea=${encodeURIComponent(selections.carpetArea)}&estimatedPrice=${encodeURIComponent(estimatedPrice)}`;
   console.log("Result URL:", resultUrl);
+  selectedSigningAmount = 0.4 * estimatedPrice;
+  selectedPhaseOneComplete = 0.4 * estimatedPrice;
+  selectedTwoDaysBeforeComplete = 0.2 * estimatedPrice;
+  console.log("signing amount:",selectedSigningAmount);
+  console.log("signing amount:",selectedPhaseOneComplete);
+  console.log("signing amount:",selectedTwoDaysBeforeComplete);
+  document.getElementById('signingAmount').value = selectedSigningAmount;
+  document.getElementById('phaseOneComplete').value = selectedPhaseOneComplete;
+  document.getElementById('twoDaysBeforeComplete').value = selectedTwoDaysBeforeComplete;
+
+
 
   // Redirect to the result.html page
   window.open(resultUrl, "_blank");
