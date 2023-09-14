@@ -315,8 +315,8 @@ document.getElementById("Confirm-btn").addEventListener("click", function () {
   console.log("signing amount:",selectedPhaseOneComplete);
   console.log("signing amount:",selectedTwoDaysBeforeComplete);
   document.getElementById('signingAmount').value = selectedSigningAmount;
-  document.getElementById('phaseOneComplete').value = selectedPhaseOneComplete;
-  document.getElementById('twoDaysBeforeComplete').value = selectedTwoDaysBeforeComplete;
+  document.getElementById('layoutFinalizationAmountResult').value = selectedPhaseOneComplete;
+  document.getElementById('3dFinalizationAmountResult').value = selectedTwoDaysBeforeComplete;
 
 
 
