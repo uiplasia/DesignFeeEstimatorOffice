@@ -81,14 +81,15 @@ th{
                     <td><strong>City</strong></td>
                     <td id="CityCell"></td>
                 </tr>
-                    <td><strong>Styling</strong></td>
-                    <td id="StylingCell"></td>
                 </tr>
                     <td><strong>Plan Type</strong></td>
                     <td id="PlanTypeCell"></td>
                 </tr>
                 <td><strong>Estimated Price</strong></td>
                 <td id="EstimatedPriceCell"></td>
+            </tr>
+                
+                <td colspan="2"><strong>GST extra as applicable</strong></td>
 
         <table>
             <thead>
@@ -101,7 +102,6 @@ th{
                 <tr>
                     <td id="description"><ul id="planDescription"></ul></td>
                 </tr>
-                
 
 
 </tbody>
@@ -124,7 +124,7 @@ th{
         const projectType = urlParams.get("projectType");
         const city = urlParams.get("city");
         const propertyType = urlParams.get("propertyType");
-        const styling = urlParams.get("styling");
+        //const styling = urlParams.get("styling");
         //const ceilingHeight = urlParams.get("ceilingHeight");
         const plan = urlParams.get("plan");
         const carpetArea = parseFloat(urlParams.get("carpetArea"));
@@ -153,8 +153,8 @@ th{
     projectTypeCell.textContent += projectType.charAt(0).toUpperCase() + projectType.slice(1);
     const cityCell = document.getElementById("CityCell");
     cityCell.textContent += city.charAt(0).toUpperCase() + city.slice(1);
-    const stylingCell = document.getElementById("StylingCell");
-    stylingCell.textContent += styling.charAt(0).toUpperCase() + styling.slice(1);
+    // const stylingCell = document.getElementById("StylingCell");
+    // stylingCell.textContent += styling.charAt(0).toUpperCase() + styling.slice(1);
     const planTypeCell = document.getElementById("PlanTypeCell");
     planTypeCell.textContent += plan.charAt(0).toUpperCase() + plan.slice(1);
     const estimatedPriceCell = document.getElementById("EstimatedPriceCell");
@@ -180,9 +180,12 @@ if (plan === "Premium") {
             <li>Research & Study of Requirements</li>
             <li>Style & Theme Selection</li>
             <li>Effective Space Planning</li>
-            <li>Furniture, Civil, Electrical, Flooring & Ceiling Layout</li>
+            <li>Furniture Layout
+            <li>Civil Layout</li>
+            <li>Electrical Layout</li>
+            <li>Flooring & Ceiling Layout</li>
             <li>Colour Concept</li>
-            <li>Customized Conceptual Designing with Elevation</li>
+            <li>Conceptual Designing with Elevation</li>
             <li>Detailed Working Drawings</li>
             <li>3D Images to Visualize Important Areas</li>
             <li>Exclusive Arts for Desired Ambiance</li>
@@ -192,9 +195,12 @@ if (plan === "Premium") {
             <li>Research & Study of Requirements</li>
             <li>Style & Theme Selection</li>
             <li>Effective Space Planning</li>
-            <li>Furniture, Civil, Electrical, Flooring & Ceiling Layout</li>
+            <li>Furniture Layout
+            <li>Civil Layout</li>
+            <li>Electrical Layout</li>
+            <li>Flooring & Ceiling Layout</li>
             <li>Colour Concept</li>
-            <li>Customized Conceptual Designing with Elevation</li>
+            <li>Conceptual Designing with Elevation</li>
             <li>Detailed Working Drawings</li>
             <li> 3D Images to Visualize Important Areas</li>
             <li> Exclusive Arts for Desired Ambiance</li>
@@ -204,9 +210,12 @@ if (plan === "Premium") {
             <li>Research & Study of Requirements</li>
             <li>Style & Theme Selection</li>
             <li>Effective Space Planning</li>
-            <li>Furniture, Civil, Electrical, Flooring & Ceiling Layout</li>
+            <li>Furniture Layout
+            <li>Civil Layout</li>
+            <li>Electrical Layout</li>
+            <li>Flooring & Ceiling Layout</li>
             <li>Colour Concept</li>
-            <li>Customized Conceptual Designing with Elevation</li>
+            <li>Conceptual Designing with Elevation</li>
             <li>Detailed Working Drawings</li>
             <li> 3D Images to Visualize Important Areas</li>
             <li> Exclusive Arts for Desired Ambiance</li>
@@ -217,9 +226,12 @@ if (plan === "Premium") {
             <li>Research & Study of Requirements</li>
             <li>Style & Theme Selection</li>
             <li>Effective Space Planning</li>
-            <li>Furniture, Civil, Electrical, Flooring & Ceiling Layout</li>
+            <li>Furniture Layout
+            <li>Civil Layout</li>
+            <li>Electrical Layout</li>
+            <li>Flooring & Ceiling Layout</li>
             <li>Colour Concept</li>
-            <li>Customized Conceptual Designing with Elevation</li>
+            <li>Conceptual Designing with Elevation</li>
             <li>Detailed Working Drawings</li>
             <li> 3D Images to Visualize Important Areas</li>
             <li> Exclusive Arts for Desired Ambiance</li>

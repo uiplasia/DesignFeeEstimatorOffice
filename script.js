@@ -392,4 +392,3 @@ planButtons.forEach(button => {
     selectedPlanTypeInput.value = selectedPlanType;
   });
 });
-
